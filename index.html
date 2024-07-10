@@ -1,0 +1,166 @@
+<html>
+  <head>
+    <title>Zwierzyniec</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="https://cdn.glitch.global/ae1b5e63-5797-4453-a33e-b89004e777b2/background.png?v=1712258716041" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="Window">
+      <h2>
+        Serwery Minecraft <br />
+        Klasy 1aTi
+      </h2>
+      <br />
+      <br />
+<a href="https://iplogger.com/1aKCX4">
+    <img src="https://iplogger.com/1aKCX4">
+</a>
+      <h2>f1.rustix.su:25183</h2>
+      <h5>
+        <body class="main">
+          <div class="center-container">
+            <div class="flex flex-col">
+              <script
+                class="text-7xl font-medium text-white-800 mb-5"
+                id="server-ip2"
+              >
+                error;
+              </script>
+              <span class="text-gray-300 text-lg mb-3 server-online" id="motd2"
+                >404</span
+              >
+              <div class="text-3xl">
+                <span class="font-semibold server-status" id="player-count2"
+                  >0</span
+                >
+                Graczy online
+              </div>
+            </div>
+          </div>
+          <script>
+            function initServerData(serverIp, serverPort) {
+              const serverIpElement = document.getElementById("server-ip2");
+              serverIpElement.innerHTML = serverIp;
+
+              console.log(
+                "https://mcapi.us/server/status?ip=" +
+                  serverIp +
+                  "&port=" +
+                  serverPort
+              );
+              fetch(
+                "https://mcapi.us/server/status?ip=" +
+                  serverIp +
+                  "&port=" +
+                  serverPort
+              )
+                .then((response) => response.json())
+                .then((data) => handleServerStatus(data));
+
+              function handleServerStatus(data) {
+                if (data.status == "error") {
+                  console.log(data.error);
+                  return false;
+                }
+
+                const motd = document.getElementById("motd2");
+                motd.innerHTML = data.motd;
+
+                const playerCounter = document.getElementById("player-count2");
+                playerCounter.innerHTML = data.players.now;
+
+                const logo = document.getElementById("server-icon");
+                logo.src = data.favicon;
+              }
+            }
+
+            initServerData("f1.rustix.su", "25183");
+          </script>
+        </body>
+      </h5>
+      <h2>Zwierzyniec.ddns.net:25560</h2>
+      <h5>
+        <body class="main">
+          <div class="center-container">
+            <div class="flex flex-col">
+              <script
+                class="text-7xl font-medium text-white-800 mb-5"
+                id="server-ip"
+              >
+                error;
+              </script>
+              <span class="text-gray-300 text-lg mb-3 server-online" id="motd"
+                >404</span
+              >
+              <div class="text-3xl">
+                <span class="font-semibold server-status" id="player-count"
+                  >0</span
+                >
+                Graczy online
+              </div>
+            </div>
+          </div>
+          <script>
+            function initServerData(serverIp, serverPort) {
+              const serverIpElement = document.getElementById("server-ip");
+              serverIpElement.innerHTML = serverIp;
+
+              console.log(
+                "https://mcapi.us/server/status?ip=" +
+                  serverIp +
+                  "&port=" +
+                  serverPort
+              );
+              fetch(
+                "https://mcapi.us/server/status?ip=" +
+                  serverIp +
+                  "&port=" +
+                  serverPort
+              )
+                .then((response) => response.json())
+                .then((data) => handleServerStatus(data));
+
+              function handleServerStatus(data) {
+                if (data.status == "error") {
+                  console.log(data.error);
+                  return false;
+                }
+
+                const motd = document.getElementById("motd");
+                motd.innerHTML = data.motd;
+
+                const playerCounter = document.getElementById("player-count");
+                playerCounter.innerHTML = data.players.now;
+
+                const logo = document.getElementById("server-icon");
+                logo.src = data.favicon;
+              }
+            }
+
+            initServerData("zwierzyniec.ddns.net", "25560");
+          </script>
+        </body>
+      </h5>
+      <br />
+      <br />
+      <div class="inline">
+        <button
+          class="button"
+          onclick="location.href='https://discord.gg/Peb3Eusexy';"
+        >
+          Serwer Discord
+        </button>
+
+        <button class="button" onclick="location.href='https://lln4.ru/en';">
+          Legacy Launcher
+        </button>
+        <button
+          class="button"
+          onclick="location.href='http://1zwierzyniec.unaux.com/map';"
+        >
+          Mapa: f1.rustix.su
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
