@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://cdn.glitch.global/ae1b5e63-5797-4453-a33e-b89004e777b2/background.png?v=1712258716041");
+}
+
+#Window {
+  width: 400px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #222222;
+  border: 5px solid Black;
+  border-color: #000000;
+  color: White;
+  text-align: center;
+  border-radius: 10px;
+  width: 888px;
+  margin: 0 auto;
+  height:700px;
+}
+
+.button {
+  background-color: #222222;
+  border: 6px solid #444444;
+  margin-left: auto;
+  margin-right: auto;
+  color: White;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  transition-duration: 0.2s;
+  width: 50%;
+}
+
+input[type="text"],
+textarea {
+  background-color: #d1d1d1;
+}
+
+.button:hover {
+  background-color: #444444;
+}
